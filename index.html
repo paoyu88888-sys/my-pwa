@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我的PWA</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1677ff">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <style>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .card { border: 1px solid #eee; border-radius: 12px; padding: 12px; text-align: center; }
+    img { width: 48px; height: 48px; object-fit: contain; display: block; margin: 0 auto 8px; }
+  </style>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</head>
+
+<body>
+  <h2>我的PWA（测试页面）</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="alipay/bill/edu.png" alt="edu">
+      <div>edu</div>
+    </div>
+  </div>
+
+</body>
+</html>
